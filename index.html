@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <div class="weather-app">
+    <div class="theme-toggle">
+      <button id="theme-btn">🌓</button>
+    </div>
+    
+    <header class="animate__animated animate__fadeInDown">
+      <h1>Weather Forecast</h1>
+      <div class="search-box">
+        <input type="text" placeholder="Search for a city..." />
+        <button class="search-btn">Search</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="current-weather animate__animated animate__fadeIn">
+        <div class="weather-info">
+          <div class="temperature">-- °C</div>
+          <div class="date-time">--</div>
+        </div>
+        <div class="weather-icon">
+          <img src="https://openweathermap.org/img/wn/01d@4x.png" alt="Weather icon" />
+        </div>
+        <div class="weather-description">
+          <div class="condition-text">--</div>
+          <div class="location">--</div>
+        </div>
+      </section>
+
+      <section class="highlights animate__animated animate__fadeIn animate__delay-1s">
+        <h2>Today's Highlights</h2>
+        <div class="highlight-grid">
+          <div class="highlight-card">
+            <h3>Pressure</h3>
+            <div class="pressure-value">-- hPa</div>
+          </div>
+          <div class="highlight-card">
+            <h3>Wind</h3>
+            <div class="wind-speed">-- <span>m/s</span></div>
+            <div class="wind-direction">-- →</div>
+          </div>
+          <div class="highlight-card">
+            <h3>Sunrise & Sunset</h3>
+            <div class="sunrise">☀️ --:--</div>
+            <div class="sunset">🌙 --:--</div>
+          </div>
+          <div class="highlight-card">
+            <h3>Humidity</h3>
+            <div class="humidity-value">--%</div>
+            <div class="humidity-text">-- 🌵</div>
+          </div>
+          <div class="highlight-card">
+            <h3>Visibility</h3>
+            <div class="visibility-value">-- km</div>
+            <div class="visibility-text">-- 😎</div>
+          </div>
+          <div class="highlight-card">
+            <h3>Feels Like</h3>
+            <div class="feels-value">-- °C</div>
+            <div class="feels-text">-- 🔥</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="forecast animate__animated animate__fadeIn animate__delay-2s">
+        <h2>5-Day Forecast</h2>
+        <div class="forecast-grid"></div>
+      </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeIn animate__delay-3s">
+      <p>Weather data provided by OpenWeatherMap</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
